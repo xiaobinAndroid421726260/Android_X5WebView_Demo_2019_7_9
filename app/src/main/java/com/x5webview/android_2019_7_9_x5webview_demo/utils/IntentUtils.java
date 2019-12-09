@@ -1,9 +1,11 @@
-package com.x5webview.android_2019_7_9_x5webview_demo;
+package com.x5webview.android_2019_7_9_x5webview_demo.utils;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
+
+import com.x5webview.android_2019_7_9_x5webview_demo.R;
 
 import java.io.File;
 

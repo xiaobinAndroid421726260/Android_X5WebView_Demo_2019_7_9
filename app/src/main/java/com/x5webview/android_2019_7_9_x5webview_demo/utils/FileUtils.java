@@ -1,4 +1,4 @@
-package com.x5webview.android_2019_7_9_x5webview_demo;
+package com.x5webview.android_2019_7_9_x5webview_demo.utils;
 
 import android.content.Context;
 import android.os.Build;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:background="@drawable/shape_white_radius"
+        android:orientation="vertical">
+
+        <com.x5webview.android_2019_7_9_x5webview_demo.view.CirCleBarView
+            android:id="@+id/circleProgress"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="6dp"
+            app:db_radius="30dp"
+            app:ringBgColor="#efefef"
+            app:ringColor="@android:color/holo_blue_light"
+            app:ringTextColor="#222222"
+            app:strokeWidth="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="正在预览..."
+            android:textColor="#222222"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

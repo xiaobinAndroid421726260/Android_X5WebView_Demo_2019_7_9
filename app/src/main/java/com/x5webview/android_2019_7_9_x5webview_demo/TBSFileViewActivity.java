@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.tencent.smtt.sdk.TbsReaderView;
+import com.x5webview.android_2019_7_9_x5webview_demo.utils.AndroidUtils;
+import com.x5webview.android_2019_7_9_x5webview_demo.utils.FileViewerUtils;
 
 import java.io.File;
 

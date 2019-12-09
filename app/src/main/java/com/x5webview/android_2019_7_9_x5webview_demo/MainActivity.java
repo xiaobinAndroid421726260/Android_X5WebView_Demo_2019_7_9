@@ -7,11 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.x5webview.android_2019_7_9_x5webview_demo.utils.AndroidUtils;
+import com.x5webview.android_2019_7_9_x5webview_demo.utils.DocumentFileUtils;
+import com.x5webview.android_2019_7_9_x5webview_demo.utils.PermissionManagerUtils;
 
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
+    // 让单位后台人员提供下载 测试地址...
+    String url_pdf = "";
+    String url_docx = "";
+    String url_jpg = "";
+    String url_xls = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +33,29 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_open_pdf_with_tbs).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 本地打开
                 openFileWithTbs(getFilePath("TestPDF.pdf"));
-                AppDownloadUtils.getInstance(MainActivity.this)
-                        .setDownUrl("http://res01.zyxschool.com/images/teacherfiles/201907/2019/1562656185_287559.pdf")
-                        .setCallBack(new AppDownloadUtils.CallBack() {
-                            @Override
-                            public void onClick(File file, String filePath) {
-                                openFileWithTbs(filePath);
-                            }
-                        })
-                        .start();
+                // 下载到本地打开
+//                DocumentFileUtils.getInstance(MainActivity.this)
+//                        .setDisplayFile(new DocumentFileUtils.OnDisplayFile() {
+//                            @Override
+//                            public void displayError() {
+//
+//                            }
+//
+//                            @Override
+//                            public void displayImage() {
+//                                // 如果是图片，处理方法
+//                            }
+//
+//                            @Override
+//                            public void displayFile(File file, String filePath) {
+//                                openFileWithTbs(filePath);
+//                            }
+//                        })
+//                        .setFileName(DocumentFileUtils.getFileName(url_pdf))
+//                        .setLoadUrl(url_pdf)
+//                        .start();
             }
         });
 
@@ -42,43 +63,81 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openFileWithTbs(getFilePath("TestDoc.doc"));
-                AppDownloadUtils.getInstance(MainActivity.this)
-                        .setDownUrl("http://res01.zyxschool.com/images/teacherfiles/201906/2019/1561689034_870775.docx")
-                        .setCallBack(new AppDownloadUtils.CallBack() {
-                            @Override
-                            public void onClick(File file, String filePath) {
-                                openFileWithTbs(filePath);
-                            }
-                        })
-                        .start();
+
+//                DocumentFileUtils.getInstance(MainActivity.this)
+//                        .setDisplayFile(new DocumentFileUtils.OnDisplayFile() {
+//                            @Override
+//                            public void displayError() {
+//
+//                            }
+//
+//                            @Override
+//                            public void displayImage() {
+//                                // 如果是图片，处理方法
+//                            }
+//
+//                            @Override
+//                            public void displayFile(File file, String filePath) {
+//                                openFileWithTbs(filePath);
+//                            }
+//                        })
+//                        .setFileName(DocumentFileUtils.getFileName(url_docx))
+//                        .setLoadUrl(url_docx)
+//                        .start();
             }
         });
         findViewById(R.id.btn_open_ppt_with_tbs).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppDownloadUtils.getInstance(MainActivity.this)
-                        .setDownUrl("http://res01.zyxschool.com/images/teacherfiles/201906/2019/1561689073_341560.jpg")
-                        .setCallBack(new AppDownloadUtils.CallBack() {
-                            @Override
-                            public void onClick(File file, String filePath) {
-                                openFileWithTbs(file.getAbsolutePath());
-                            }
-                        })
-                        .start();
+                openFileWithTbs(getFilePath("TestPPT.ppt"));
+
+//                DocumentFileUtils.getInstance(MainActivity.this)
+//                        .setDisplayFile(new DocumentFileUtils.OnDisplayFile() {
+//                            @Override
+//                            public void displayError() {
+//
+//                            }
+//
+//                            @Override
+//                            public void displayImage() {
+//                                // 如果是图片，处理方法
+//                                AndroidUtils.showToast(MainActivity.this, "这个是图片：" + url_jpg);
+//                            }
+//
+//                            @Override
+//                            public void displayFile(File file, String filePath) {
+//                                openFileWithTbs(filePath);
+//                            }
+//                        })
+//                        .setFileName(DocumentFileUtils.getFileName(url_jpg))
+//                        .setLoadUrl(url_jpg)
+//                        .start();
             }
         });
         findViewById(R.id.btn_open_excel_with_tbs).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppDownloadUtils.getInstance(MainActivity.this)
-                        .setDownUrl("http://res01.zyxschool.com/images/teacherfiles/201907/2019/1562656228_721347.xls")
-                        .setCallBack(new AppDownloadUtils.CallBack() {
-                            @Override
-                            public void onClick(File file, String filePath) {
-                                openFileWithTbs(file.getAbsolutePath());
-                            }
-                        })
-                        .start();
+                openFileWithTbs(getFilePath("TestExcel.xls"));
+//                DocumentFileUtils.getInstance(MainActivity.this)
+//                        .setDisplayFile(new DocumentFileUtils.OnDisplayFile() {
+//                            @Override
+//                            public void displayError() {
+//
+//                            }
+//
+//                            @Override
+//                            public void displayImage() {
+//                                // 如果是图片，处理方法
+//                            }
+//
+//                            @Override
+//                            public void displayFile(File file, String filePath) {
+//                                openFileWithTbs(filePath);
+//                            }
+//                        })
+//                        .setFileName(DocumentFileUtils.getFileName(url_xls))
+//                        .setLoadUrl(url_xls)
+//                        .start();
             }
         });
     }
