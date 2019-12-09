@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 //                            }
 //
 //                            @Override
-//                            public void displayImage() {
+//                            public void displayImage(String imageUrl) {
 //                                // 如果是图片，处理方法
 //                            }
 //
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 //                            }
 //
 //                            @Override
-//                            public void displayImage() {
+//                            public void displayImage(String imageUrl) {
 //                                // 如果是图片，处理方法
 //                            }
 //
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 //                            }
 //
 //                            @Override
-//                            public void displayImage() {
+//                            public void displayImage(String imageUrl) {
 //                                // 如果是图片，处理方法
 //                                AndroidUtils.showToast(MainActivity.this, "这个是图片：" + url_jpg);
 //                            }
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 //                            }
 //
 //                            @Override
-//                            public void displayImage() {
+//                            public void displayImage(String imageUrl) {
 //                                // 如果是图片，处理方法
 //                            }
 //

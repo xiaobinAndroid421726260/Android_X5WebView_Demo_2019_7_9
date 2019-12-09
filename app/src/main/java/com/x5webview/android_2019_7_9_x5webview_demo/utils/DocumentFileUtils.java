@@ -48,7 +48,7 @@ public class DocumentFileUtils {
     private Activity mActivity;
     private String loadUrl;
     private OnDisplayFile mDisplayFile;
-    private String type[] = {".jpg", ".png", ".gif"};
+    private String type[] = {".jpg", ".jpeg", ".png", ".gif"};
     private DownloadLoading mDownloadLoading;
 
     public static DocumentFileUtils getInstance(Activity activity) {
@@ -68,7 +68,7 @@ public class DocumentFileUtils {
     public interface OnDisplayFile {
         void displayError();
 
-        void displayImage();
+        void displayImage(String imageUrl);
 
         void displayFile(File file, String filePath);
     }
@@ -150,7 +150,7 @@ public class DocumentFileUtils {
                     break;
                 case DOWNLOAD_IMAGE:
                     mDownloadLoading.dismiss();
-                    mDisplayFile.displayImage();
+                    mDisplayFile.displayImage(loadUrl);
                     break;
                 case DOWNLOAD_REPEAT:
                     LogUtils.e("----DOWNLOAD_REPEAT");
